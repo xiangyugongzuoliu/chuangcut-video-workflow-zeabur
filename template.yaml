@@ -204,45 +204,18 @@ spec:
     ## 快速开始
 
     1. 点击「Deploy on Zeabur」按钮
-    2. 联系供应商获取授权码 (LICENSE_KEY)
-    3. 生成加密密钥 (ENCRYPTION_KEY):
-       ```bash
-       node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
-       ```
-    4. 填写环境变量并部署
-    5. 访问部署的 URL，在 /settings 页面配置 API 密钥
+    2. 按提示填写环境变量
+    3. 部署完成后，访问 `/settings` 页面配置 API 密钥
+    4. 访问 `/jobs` 创建视频任务
 
-    ## API 密钥配置
+    ## 核心功能
 
-    部署完成后，需要在 `/settings` 页面配置以下 API 密钥：
+    - 智能视频分析（Gemini AI）
+    - 自动生成分镜脚本
+    - AI 配音合成（Fish Audio）
+    - 云端音画同步（NCA Toolkit）
+    - 断点续传和任务管理
 
-    - **Google Gemini** (二选一):
-      - Vertex AI 模式：Service Account JSON + Project ID + Location + Model ID
-      - AI Studio 模式：API Key + Model ID
-    - **NCA Toolkit**：API Key（视频处理服务）
-    - **Fish Audio**：API Key + Voice ID（语音合成）
-    - **Google Cloud Storage**（可选）：Service Account JSON + Bucket Name
+    ## 作者
 
-    ## 使用流程
-
-    1. 访问 `/jobs` 页面
-    2. 点击「创建新任务」
-    3. 输入视频 URL（支持公开可访问的视频链接）
-    4. 选择解说风格（15+ 预设风格）
-    5. 配置参数（解说人声、配音选项等）
-    6. 提交任务，系统自动处理
-
-    ## 注意事项
-
-    - 首次部署需要初始化数据库（自动完成）
-    - API 密钥加密存储在 SQLite 数据库中
-    - 视频处理时间取决于视频长度和复杂度
-    - 建议配置：2 CPU / 4GB RAM（最小），4 CPU / 8GB RAM（推荐）
-
-    ## 文档链接
-
-    - [部署说明](https://github.com/xiangyugongzuoliu/chuangcut-video-workflow-zeabur/blob/main/README.md)
-
-    ## 技术支持
-
-    如有问题，请通过 GitHub Issues 反馈。
+    翔宇工作流
