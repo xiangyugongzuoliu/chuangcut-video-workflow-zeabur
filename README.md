@@ -34,13 +34,9 @@
 
 ### 1. 获取授权码
 
-部署前请联系供应商获取授权码 (LICENSE_KEY)。
+部署前需要获取授权码 (LICENSE_KEY)。授权码用于激活应用功能。
 
 授权码格式：`CCUT-XXXXXX-XXXXXXXXXXXX-XXXX`
-
-**联系方式**：
-- 邮箱: support@example.com
-- 微信: example_wechat
 
 ### 2. 生成加密密钥
 
@@ -50,7 +46,7 @@
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
-输出示例：`1486fdd2753a4d4bcb6d3468bac183f8c514502e0f4db65a0c6165f2057e6fda`
+输出示例：`a1b2c3d4e5f6...（64个十六进制字符）`
 
 ### 3. 一键部署到 Zeabur
 
@@ -58,8 +54,8 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 
 | 环境变量 | 说明 | 示例 |
 |---------|------|------|
-| `LICENSE_KEY` | 供应商提供的授权码（必填） | `CCUT-202511-6DTZR3XMUKND-E102` |
-| `ENCRYPTION_KEY` | 加密密钥（必填，使用上一步生成的） | `1486fdd2753a4d4bcb6d3468bac183f8c514502e0f4db65a0c6165f2057e6fda` |
+| `LICENSE_KEY` | 授权码（必填） | `CCUT-XXXXXX-XXXXXXXXXXXX-XXXX` |
+| `ENCRYPTION_KEY` | 加密密钥（必填，使用上一步生成的） | `your-generated-64-char-hex-key` |
 
 其他环境变量使用默认值即可。
 
@@ -166,8 +162,8 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 
 | 变量名 | 说明 | 示例 |
 |--------|------|------|
-| `LICENSE_KEY` | 授权码 | `CCUT-202511-6DTZR3XMUKND-E102` |
-| `ENCRYPTION_KEY` | 加密密钥 | `1486fdd2753a4d4bcb6d3468bac183f8c514502e0f4db65a0c6165f2057e6fda` |
+| `LICENSE_KEY` | 授权码 | `CCUT-XXXXXX-XXXXXXXXXXXX-XXXX` |
+| `ENCRYPTION_KEY` | 加密密钥 | `your-generated-64-char-hex-key` |
 
 ### 可选配置
 
@@ -207,26 +203,20 @@ A: 在任务详情页面的「运行日志」标签查看。日志存储在 SQLi
 A: 联系供应商续期，更新 LICENSE_KEY 环境变量后重启服务。
 
 ### Q: 可以同时处理多个任务吗？
-A: 可以，并发数取决于授权限制（如试用版 3 个，标准版 10 个，企业版 50 个）。
+A: 可以，并发数取决于授权限制。具体数量由授权码配置决定。
 
 ---
 
-## 📚 文档链接
+## 📚 相关资源
 
-- [完整部署指南](./DEPLOYMENT_GUIDE.md)
-- [使用手册](./USAGE.md)
-- [常见问题](./FAQ.md)
-- [API 参考](./API_REFERENCE.md)
+- [项目 GitHub](https://github.com/xiangyugongzuoliu/chuangcut-video-workflow-zeabur)
+- [报告问题](https://github.com/xiangyugongzuoliu/chuangcut-video-workflow-zeabur/issues)
 
 ---
 
 ## 🆘 技术支持
 
-如有任何问题，请联系：
-
-- **邮箱**: support@example.com
-- **微信**: example_wechat
-- **工作时间**: 周一至周五 9:00-18:00
+如有任何问题，请通过 GitHub Issues 反馈。
 
 ---
 
@@ -238,5 +228,4 @@ A: 可以，并发数取决于授权限制（如试用版 3 个，标准版 10 �
 
 ---
 
-**维护者**: 翔宇工作流
 **最后更新**: 2025-11-19

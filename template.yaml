@@ -241,10 +241,8 @@ spec:
 
     ## 文档链接
 
-    - [完整部署指南](https://github.com/xiangyugongzuoliu/chuangcut-video-workflow-zeabur/blob/main/DEPLOYMENT_GUIDE.md)
-    - [使用手册](https://github.com/xiangyugongzuoliu/chuangcut-video-workflow-zeabur/blob/main/USAGE.md)
-    - [常见问题](https://github.com/xiangyugongzuoliu/chuangcut-video-workflow-zeabur/blob/main/FAQ.md)
+    - [部署说明](https://github.com/xiangyugongzuoliu/chuangcut-video-workflow-zeabur/blob/main/README.md)
 
     ## 技术支持
 
-    如有问题，请联系：support@example.com
+    如有问题，请通过 GitHub Issues 反馈。
