@@ -38,7 +38,7 @@ spec:
     - key: LICENSE_KEY
       type: STRING
       name: 🔑 授权码
-      description: 供应商提供的授权码（必填）。格式：CCUT-XXXXXX-XXXXXXXXXXXX-XXXX
+      description: 翔宇工作流提供的授权码（必填）。格式：CCUT-XXXXXXXX-XXXX（仅 18-24 字符）
       expose: true
 
     # ========================================
